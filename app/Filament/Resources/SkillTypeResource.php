@@ -25,7 +25,7 @@ class SkillTypeResource extends Resource
             ->schema([
                 //
                 Forms\Components\TextInput::make('name')
-                    ->label('Skills Name')
+                    ->label('Skills Categories')
                     ->required(),
             ]);
     }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -17,7 +18,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Abhi Ram Tej</title>
+    <title>YVEZH</title>
 </head>
 
 <body>
@@ -99,14 +100,14 @@
                         <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle">
                     </div>
                     <ul class="home__social">
-                        <a href="#" target="_blank" class="home__social-link">
+                        <a href="https://linkedin.com/in/naufal-fathi-rizqy-fadhilah-384b7629a" target="_blank" class="home__social-link">
                             <i class="ri-linkedin-box-line"></i>
                         </a>
-                        <a href="#" target="_blank" class="home__social-link">
+                        <a href="https://github.com/Ftih07" target="_blank" class="home__social-link">
                             <i class="ri-github-line"></i>
                         </a>
-                        <a href="#" target="_blank" class="home__social-link">
-                            <i class="ri-twitter-line"></i>
+                        <a href="https://www.instagram.com/vyezhvillette/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
                         </a>
                     </ul>
                 </div>
@@ -126,7 +127,7 @@
                             CONTACT
                         </h3>
                         <p class="home__info-description">
-                            Indonesia <br>
+                            Jawa Tengah <br>
                             naufalfathi37@gmail.com <br>
                             +62 812 2611 0988 <br>
                         </p>
@@ -136,8 +137,9 @@
                             ACHIEVEMENTS
                         </h3>
                         <p class="home__info-description">
-                            Selected as - Google Intern <br>
-                            Selected as - Amazon Full Time Developer<br>
+                            @foreach($selectedCompanies as $company)
+                            {{ $company->name }} - {{ $company->place }} <br><br>
+                            @endforeach
                         </p>
                     </div>
                 </div>
@@ -157,7 +159,7 @@
                             COMPLETED PROJECTS
                         </h3>
                         <p class="home__info-number">
-                            15+
+                            {{ $projectsCount }}+
                         </p>
                     </div>
                     <div>
@@ -165,7 +167,7 @@
                             COMPANIES WORKED FOR
                         </h3>
                         <p class="home__info-number">
-                            2+
+                            {{ $companyCount }}+
                         </p>
                     </div>
                 </div>
@@ -182,384 +184,24 @@
                 Experience
             </span>
             <div class="skills__container container grid section__border">
-                <!--==================== SKILLS 1 ====================-->
+                @foreach($skilltypes as $type)
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Frontend Tech Stack
+                        <i class="ri-braces-line"></i> {{ $type->name }}
                     </h3>
                     <div class="skills__info">
+                        @foreach($type->skills as $skill)
                         <div class="skills__data">
                             <div class="skills__blob">
-                                <img src="assets/img/icons8-java-120.svg" alt="skills image">
+                                <img src="{{ asset('storage/' . $skill->icon) }}" alt="{{ $skill->name }}">
                             </div>
-                            <h3 class="skills__name">
-                                Java
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
+                            <h3 class="skills__name">{{ $skill->name }}</h3>
+                            <span class="skills__subtitle">{{ $skill->skill_level }}</span>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-android-studio-100.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Android
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-flutter-120.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Flutter
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-google-firebase-console-120.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Firebase
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/git-icon.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Git
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <!--==================== SKILLS 2 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Backend Tech Stack
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-binary-code-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DSA
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-plugin-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OOPS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-database-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DBMS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-console-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-multicast-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                CN
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!--==================== SKILLS 3 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Database
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-java-120.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Java
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-android-studio-100.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Android
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-flutter-120.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Flutter
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-google-firebase-console-120.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Firebase
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/git-icon.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                Git
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!--==================== SKILLS 4 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Cloud Tech Stack
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-binary-code-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DSA
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-plugin-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OOPS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-database-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DBMS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-console-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-multicast-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                CN
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!--==================== SKILLS 5 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Mobile Development
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-binary-code-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DSA
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-plugin-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OOPS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-database-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DBMS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-console-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-multicast-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                CN
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!--==================== SKILLS 6 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Tools & Utilities
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-binary-code-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DSA
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-plugin-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OOPS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-database-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                DBMS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-console-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                OS
-                            </h3>
-                            <span class="skills__subtitle">
-                                Intermediate
-                            </span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="assets/img/icons8-multicast-100.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">
-                                CN
-                            </h3>
-                            <span class="skills__subtitle">
-                                Advanced
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
 
@@ -573,87 +215,28 @@
             </span>
             <div class="qualification__container container grid section__border">
                 <!--==================== QUALIFICATION 1 ====================-->
+                @foreach($qualificationtype as $qualificationtype)
                 <div class="qualification__content">
                     <h3 class="qualification__title">
-                        <i class="ri-book-line"></i> Education
+                        <i class="ri-book-line"></i> {{ $qualificationtype->name }}
                     </h3>
                     <div class="qualification__info">
+                        @foreach($qualificationtype->qualifications as $qualification)
                         <div>
                             <h3 class="qualification__name">
-                                Bachelor Of Technology [B.TECH]
+                                {{ $qualification->name }}
                             </h3>
                             <span class="qualification__country">
-                                University Of New World
+                                {{ $qualification->place }}
                             </span>
                             <span class="qualification__year">
-                                2015 - 2020
+                                {{ $qualification->date }}
                             </span>
                         </div>
-                        <div>
-                            <h3 class="qualification__name">
-                                Junior College
-                            </h3>
-                            <span class="qualification__country">
-                                New World Junior College
-                            </span>
-                            <span class="qualification__year">
-                                2013 - 2015
-                            </span>
-                        </div>
-                        <div>
-                            <h3 class="qualification__name">
-                                High School
-                            </h3>
-                            <span class="qualification__country">
-                                New World High School
-                            </span>
-                            <span class="qualification__year">
-                                2001 - 2013
-                            </span>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <!--==================== QUALIFICATION 2 ====================-->
-                <div class="qualification__content">
-                    <h3 class="qualification__title">
-                        <i class="ri-building-line"></i> Experience
-                    </h3>
-                    <div class="qualification__info">
-                        <div>
-                            <h3 class="qualification__name">
-                                Web Developer
-                            </h3>
-                            <span class="qualification__country">
-                                google
-                            </span>
-                            <span class="qualification__year">
-                                Feb 2021 - May 2022
-                            </span>
-                        </div>
-                        <div>
-                            <h3 class="qualification__name">
-                                Full Stack Developer
-                            </h3>
-                            <span class="qualification__country">
-                                Amazon
-                            </span>
-                            <span class="qualification__year">
-                                Oct 2022 - Mar 2023
-                            </span>
-                        </div>
-                        <div>
-                            <h3 class="qualification__name">
-                                SDE Full Time
-                            </h3>
-                            <span class="qualification__country">
-                                Microsoft
-                            </span>
-                            <span class="qualification__year">
-                                Sep 2023 - Present
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img">
@@ -668,42 +251,19 @@
                 What makes me stand out
             </span>
             <div class="achievements__container container grid section__border">
+                @foreach($achievement as $achievement)
                 <div class="achievements__card">
                     <i class="ri-trophy-line"></i>
                     <h2 class="achievements__title">
-                        Winner <br>
-                        Summer Amazon Hackathon
+                        {{ $achievement->name }}
                     </h2>
                     <p class="achievements__description">
-                        Won Summer Amazon Hackathon, the biggest hackathon of Amazon.
+                        {{ $achievement->desc }}
                     </p>
                     <div class="achievements__border">
                     </div>
                 </div>
-                <div class="achievements__card">
-                    <i class="ri-trophy-line"></i>
-                    <h2 class="achievements__title">
-                        Winner <br>
-                        Summer Amazon Hackathon
-                    </h2>
-                    <p class="achievements__description">
-                        Won Summer Amazon Hackathon, the biggest hackathon of Amazon.
-                    </p>
-                    <div class="achievements__border">
-                    </div>
-                </div>
-                <div class="achievements__card">
-                    <i class="ri-trophy-line"></i>
-                    <h2 class="achievements__title">
-                        Winner <br>
-                        Summer Amazon Hackathon
-                    </h2>
-                    <p class="achievements__description">
-                        Won Summer Amazon Hackathon, the biggest hackathon of Amazon.
-                    </p>
-                    <div class="achievements__border">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
 
@@ -719,50 +279,25 @@
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
                         <!--==================== PROJECT 1 ====================-->
+                        @foreach($projects as $project)
                         <div class="projects__content swiper-slide">
-                            <img src="TRAVEL.png" alt="projects image" class="projects__img">
+                            <img src="{{ asset('storage/' . $project->image_project) }}" alt="{{ $project->name }}" class="projects__img">
                             <div>
                                 <span class="projects__subtitle">
-                                    Fullstack
+                                    {{ $project->role }}
                                 </span>
                                 <h1 class="projects__title">
-                                    Travel Website
+                                    {{ $project->name }}
                                 </h1>
-                                <a href="#" class="projects__button">
+                                <p class="projects__tech">
+                                    {{ $project->tech }}
+                                </p>
+                                <a href="{{ $project->demo_link }}" class="projects__button" target="_blank">
                                     Demo <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
-                        <div class="projects__content swiper-slide">
-                            <img src="PORTFOLIO-.png" alt="projects image" class="projects__img">
-                            <div>
-                                <span class="projects__subtitle">
-                                    front-end
-                                </span>
-                                <h1 class="projects__title">
-                                    Portfolio Website
-                                </h1>
-                                <a href="#" class="projects__button">
-                                    Demo <i class="ri-arrow-right-line"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--==================== PROJECT 3 ====================-->
-                        <div class="projects__content swiper-slide">
-                            <img src="MOVIES_.png" alt="projects image" class="projects__img">
-                            <div>
-                                <span class="projects__subtitle">
-                                    front-end
-                                </span>
-                                <h1 class="projects__title">
-                                    Movies Website
-                                </h1>
-                                <a href="#" class="projects__button">
-                                    Demo <i class="ri-arrow-right-line"></i>
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <!-- Swiper arrows -->
                     <div class="swiper-button-next">
@@ -800,7 +335,7 @@
                                 Email
                             </span>
                             <span class="contact__data-info">
-                                contactme@gmail.com
+                                naufalfathi37@gmail.com
                             </span>
                         </div>
                         <div class="contact__data">
@@ -808,21 +343,21 @@
                                 WhatsApp
                             </span>
                             <span class="contact__data-info">
-                                +xxxxxxxxxx
+                                +62 812-2611-0988
                             </span>
-                            <a href="#" target="_blank" class="contact__button">
+                            <a href="https://wa.me/6281226110988" target="_blank" rel="noopener noreferrer" class="contact__button">
                                 Text me <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                         <div class="contact__data">
                             <span class="contact__data-title">
-                                Telegram
+                                Linkedin
                             </span>
                             <span class="contact__data-info">
-                                https://t.me/contactme
+                                Naufal Fathi Rizqy Fadhilah
                             </span>
-                            <a href="https://t.me/kritikmodi" target="_blank" class="contact__button">
-                                Join <i class="ri-arrow-right-line"></i>
+                            <a href="https://linkedin.com/in/naufal-fathi-rizqy-fadhilah-384b7629a" target="_blank" class="contact__button">
+                                Visit <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
@@ -831,7 +366,8 @@
                     <h3 class="contact__title">
                         <i class="ri-send-plane-line"></i> Have a query for me?
                     </h3>
-                    <form action="" class="contact__form" id="contact-form">
+                    <form action="{{ route('contact.store') }}" method="POST" class="contact__form" id="contact-form">
+                        @csrf
                         <div class="contact__form-div">
                             <label class="contact__form-tag">
                                 Name
@@ -864,10 +400,10 @@
     <footer class="footer">
         <div class="footer__container container">
             <h1 class="footer__title">
-                Abhi Ram Tej
+                Naufal Fathi Rizqy Fadhilah
             </h1>
             <p>
-                Frontend Developer
+                Fullstack Web Developer
             </p>
             <ul class="footer__list">
                 <li>
@@ -881,14 +417,14 @@
                 </li>
             </ul>
             <ul class="footer__social">
-                <a href="#" target="_blank" class="footer__social-link">
+                <a href="https://linkedin.com/in/naufal-fathi-rizqy-fadhilah-384b7629a" target="_blank" class="footer__social-link">
                     <i class="ri-linkedin-box-line"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
+                <a href="https://github.com/Ftih07" target="_blank" class="footer__social-link">
                     <i class="ri-github-line"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="ri-twitter-line"></i>
+                <a href="https://www.instagram.com/vyezhvillette/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
                 </a>
             </ul>
             <span class="footer__copy">

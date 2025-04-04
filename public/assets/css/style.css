@@ -672,6 +672,13 @@ body.dark-theme{
   background-color: var(--title-color);
 }
 
+.projects__tech {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+}
+
+
 /*=============== TESTIMONIAL ===============*/
 
 

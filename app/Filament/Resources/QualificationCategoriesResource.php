@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SkillsResource\Pages;
-use App\Filament\Resources\SkillsResource\RelationManagers;
-use App\Models\Skill;
-use App\Models\Skills;
+use App\Filament\Resources\QualificationCategoriesResource\Pages;
+use App\Filament\Resources\QualificationCategoriesResource\RelationManagers;
+use App\Models\QualificationCategories;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class SkillsResource extends Resource
+class QualificationCategoriesResource extends Resource
 {
-    protected static ?string $model = Skill::class;
+    protected static ?string $model = QualificationCategories::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -25,21 +24,9 @@ class SkillsResource extends Resource
         return $form
             ->schema([
                 //
-                Forms\Components\Select::make('skilltype_id')
-                    ->label('Type Skills')
-                    ->relationship('skilltype', 'name')
-                    ->required(),
-
-                Forms\Components\FileUpload::make('icon')
-                    ->label('icon')
-                    ->directory('icons'),
-
                 Forms\Components\TextInput::make('name')
-                    ->label('Skills Name')
+                    ->label('Qualification Categories')
                     ->required(),
-
-                Forms\Components\TextInput::make('skill_level')
-                    ->label('Skills Level'),
             ]);
     }
 
@@ -48,12 +35,7 @@ class SkillsResource extends Resource
         return $table
             ->columns([
                 //
-                Tables\Columns\TextColumn::make('skilltype.name')
-                    ->label('Skill Type')
-                    ->sortable(),
-                Tables\Columns\ImageColumn::make('icon')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('skill_level')->searchable()->sortable(),
             ])
             ->filters([
                 //
@@ -78,9 +60,9 @@ class SkillsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSkills::route('/'),
-            'create' => Pages\CreateSkills::route('/create'),
-            'edit' => Pages\EditSkills::route('/{record}/edit'),
+            'index' => Pages\ListQualificationCategories::route('/'),
+            'create' => Pages\CreateQualificationCategories::route('/create'),
+            'edit' => Pages\EditQualificationCategories::route('/{record}/edit'),
         ];
     }
 }
