@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
+
     <!--=============== FAVICON ===============-->
     <link
         rel="shortcut icon"
@@ -30,32 +32,37 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo"> YVEZH JOKI </a>
+            <a href="{{ route('index') }}" target="_blank" class="nav__logo"> YVEZH JOKI </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__itemm">
                         <a href="#home" class="nav__link active-link">
-                            <i class="ri-home-line"></i> Home
+                            <i class="ri-home-5-line"></i> Home
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#info_dikit" class="nav__link">
-                            <i class="ri-code-line"></i> Tentang Kami
+                            <i class="ri-information-line"></i> About Us
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#achievements" class="nav__link">
-                            <i class="ri-trophy-line"></i> Kenapa Harus Disini?
+                            <i class="ri-shield-star-line"></i> Why Us?
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#projects" class="nav__link">
-                            <i class="ri-macbook-line"></i> Price List
+                            <i class="ri-price-tag-3-line"></i> Price List
+                        </a>
+                    </li>
+                    <li class="nav__itemm">
+                        <a href="#tata_cara" class="nav__link">
+                            <i class="ri-guide-line"></i> Joki Guide
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#contact" class="nav__link">
-                            <i class="ri-chat-4-line"></i> Hubungi Atmin
+                            <i class="ri-mail-send-line"></i> Contact Us
                         </a>
                     </li>
                 </ul>
@@ -90,7 +97,7 @@
                     </h1>
                     <div class="home__blob grid">
                         <div class="home__perfil">
-                            <img src="PF.jpg" alt="home perfil" />
+                            <img src="poster.png" alt="home perfil" />
                         </div>
                         <img
                             src="assets/img/shape-wawes.svg"
@@ -124,7 +131,7 @@
                     <div>
                         <h3 class="home__info-title">CONTACT</h3>
                         <p class="home__info-description">
-                            Jateng ajah <br />
+                            Jawa Tengah <br />
                             giipc5013@gmail.com.com <br />
                             +62 821 3612 2777 <br />
                         </p>
@@ -205,7 +212,7 @@
         <!--==================== KENAPA HARUS DISINI? ====================-->
         <section class="achievements section" id="achievements">
             <h2 class="section__title">Kenapa Harus Joki Disini?</h2>
-            <span class="section__subtitle"> Sebenernya bebas si mau apa enggak hehw </span>
+            <span class="section__subtitle"> Alasan kenapa kamu harus joki gensin disini </span>
             <div class="achievements__container container grid section__border">
                 <div class="achievements__card">
                     <i class="ri-trophy-line"></i>
@@ -255,7 +262,7 @@
                         <!--==================== Rawat Akun - Harian ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\rawat-akun\harian.png"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -270,7 +277,7 @@
                         <!--==================== Rawat Akun - Mingguan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\rawat-akun\mingguan.png"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -284,7 +291,7 @@
                         <!--==================== Rawat Akun - Bulanan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\rawat-akun\bulanan.png"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -319,7 +326,7 @@
                         <!--==================== Archon Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\quest\archon-quest.webp"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -334,7 +341,7 @@
                         <!--==================== Story Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\quest\story-quest.webp"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -348,7 +355,7 @@
                         <!--==================== World Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\quest\world-quest.webp"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -362,12 +369,26 @@
                         <!--==================== Hangout Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\quest\hangout-quest.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
                                 <span class="projects__subtitle"> Rp. 30.000 / Karakter atau Rp. 7.000 / Chapter </span>
                                 <h1 class="projects__title">Hangout Quest</h1>
+                                <a href="#" class="projects__button">
+                                    Sesuai Request <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--==================== Tribal Chronicles Quest ====================-->
+                        <div class="projects__content swiper-slide">
+                            <img
+                                src="assets\img\quest\tribal-chronicles.jpg"
+                                alt="projects image"
+                                class="projects__img" />
+                            <div>
+                                <span class="projects__subtitle"> Rp. 35.000 / Karakter </span>
+                                <h1 class="projects__title">Tribal Chronicles Quest</h1>
                                 <a href="#" class="projects__button">
                                     Sesuai Request <i class="ri-arrow-right-line"></i>
                                 </a>
@@ -397,7 +418,7 @@
                         <!--==================== Explore - Mondstadt ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\mondstadt.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -411,7 +432,7 @@
                         <!--==================== Explore - Liyue ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\liyue.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -425,7 +446,7 @@
                         <!--==================== Explore - Inazuma ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\inazuma.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -439,7 +460,7 @@
                         <!--==================== Explore - Sumeru ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\sumeru.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -453,7 +474,7 @@
                         <!--==================== Explore - Fontaine ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\fontaine.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -467,7 +488,7 @@
                         <!--==================== Explore - Natlan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\explore\natlan.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -493,7 +514,7 @@
         </section>
 
         <!--==================== Price List Joki Up Lv Char, Weapon, Build / Farm Artefak ====================-->
-        <section class="projects section" id="projects">
+        <section class="projects section">
             <h2 class="section__title">Up Lv. Karakter, Senjata, dan Build Artefak</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
@@ -502,7 +523,7 @@
                         <!--==================== Up Level Karakter, Lv. 1 - 90 ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\uplv\char.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -516,7 +537,7 @@
                         <!--==================== Up Level Senjata, Lv. 1 - 90 ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\uplv\weapon.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -530,7 +551,7 @@
                         <!--==================== Rp. 10.000 - 50.000 / Karakter ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\uplv\artefak.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -556,7 +577,7 @@
         </section>
 
         <!--==================== Price List Joki Events ====================-->
-        <section class="projects section" id="projects">
+        <section class="projects section">
             <h2 class="section__title">Joki Event</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
@@ -565,7 +586,7 @@
                         <!--==================== Event Kecil ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\event\smallevent.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -579,7 +600,7 @@
                         <!--==================== Event Besar ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\event\bigevent.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -605,7 +626,7 @@
         </section>
 
         <!--==================== Price List Joki Lainnya (Spiral, Weekly Boss, Weekly Bounty, Imaginarium Teather, Teleport, Oculus, Achievement, Material) ====================-->
-        <section class="projects section" id="projects">
+        <section class="projects section">
             <h2 class="section__title">Joki Lainnya</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
@@ -614,7 +635,7 @@
                         <!--==================== Joki Spiral Abyss ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\spiral.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -628,7 +649,7 @@
                         <!--==================== Farm Material Tanaman, Hasil Tambang, Musuh, Dll ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\material.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -642,7 +663,7 @@
                         <!--==================== Weekly Boss ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\weeklyboss.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -656,7 +677,7 @@
                         <!--==================== Weekly Bounty ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\weeklybounty.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -670,7 +691,7 @@
                         <!--==================== Imaginarium Teather ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\imaginarium.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -684,7 +705,7 @@
                         <!--==================== Statue of The Seven & Teleport ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\statueoftheseven.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -698,7 +719,7 @@
                         <!--==================== Oculus atau yang sejenisnya ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\oculus.webp"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -712,7 +733,7 @@
                         <!--==================== Achievement ====================-->
                         <div class="projects__content swiper-slide">
                             <img
-                                src="assets\img\rawat-akun\rawat.png"
+                                src="assets\img\lainnya\achievement.jpg"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
@@ -739,7 +760,7 @@
 
 
         <!--==================== Tata Cara Order Jokian ====================-->
-        <section class="qualification section" id="qualification">
+        <section class="qualification section" id="tata_cara">
             <h2 class="section__title">Tata Cara Order Joki</h2>
             <span class="section__subtitle"> Tutor buat yang mau order jokiannya </span>
             <div class="qualification__container container grid section__border">
@@ -877,7 +898,7 @@
                     <a href="#home" class="footer__link">Home</a>
                 </li>
                 <li>
-                    <a href="#info_dikit" class="footer__link">Tentang Kami</a>
+                    <a href="#info_dikit" class="footer__link">About Us</a>
                 </li>
                 <li>
                     <a href="#projects" class="footer__link">Price List</a>

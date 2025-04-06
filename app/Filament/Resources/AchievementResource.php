@@ -17,7 +17,12 @@ class AchievementResource extends Resource
 {
     protected static ?string $model = Achievement::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    public static function getNavigationBadge(): ?string
+    {
+        return Achievement::count(); // Menampilkan jumlah total data booking
+    }
+
+    protected static ?string $navigationIcon = 'heroicon-o-trophy';
 
     public static function form(Form $form): Form
     {

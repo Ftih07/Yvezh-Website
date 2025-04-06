@@ -17,7 +17,12 @@ class QualificationsResource extends Resource
 {
     protected static ?string $model = Qualifications::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    public static function getNavigationBadge(): ?string
+    {
+        return Qualifications::count(); // Menampilkan jumlah total data booking
+    }
+
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     public static function form(Form $form): Form
     {

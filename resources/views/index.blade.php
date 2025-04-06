@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
+
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -25,7 +28,7 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="{{ route('joki') }}" target="_blank" class="nav__logo">
                 YVEZH
             </a>
             <div class="nav__menu" id="nav-menu">
@@ -94,7 +97,7 @@
                     </h1>
                     <div class="home__blob grid">
                         <div class="home__perfil">
-                            <img src="assets/img/PF.jpg" alt="home perfil">
+                            <img src="assets/img/mbuh.jpg" alt="home perfil">
                         </div>
                         <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-wawes">
                         <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle">

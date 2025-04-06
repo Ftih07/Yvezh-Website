@@ -598,6 +598,8 @@ body.dark-theme{
 }
 
 .projects__img{
+  object-fit: cover;
+  height: 190px;
   width: 250px;
   border-radius: .75rem;
   margin-bottom: 1.25rem;

@@ -17,7 +17,12 @@ class SkillTypeResource extends Resource
 {
     protected static ?string $model = SkillType::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    public static function getNavigationBadge(): ?string
+    {
+        return SkillType::count(); // Menampilkan jumlah total data booking
+    }
+
+    protected static ?string $navigationIcon = 'heroicon-o-sparkles';
 
     public static function form(Form $form): Form
     {

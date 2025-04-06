@@ -17,7 +17,12 @@ class ProjectsResource extends Resource
 {
     protected static ?string $model = Projects::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    public static function getNavigationBadge(): ?string
+    {
+        return Projects::count(); // Menampilkan jumlah total data booking
+    }
+
+    protected static ?string $navigationIcon = 'heroicon-o-folder';
 
     public static function form(Form $form): Form
     {
