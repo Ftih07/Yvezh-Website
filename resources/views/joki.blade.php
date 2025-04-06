@@ -23,14 +23,14 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/joki.css">
 
-    <title>Abhi Ram Tej</title>
+    <title>YVEZH - Joki</title>
 </head>
 
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo"> ART </a>
+            <a href="#" class="nav__logo"> YVEZH JOKI </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__itemm">
@@ -39,28 +39,23 @@
                         </a>
                     </li>
                     <li class="nav__itemm">
-                        <a href="#skills" class="nav__link">
-                            <i class="ri-code-line"></i> Skills
-                        </a>
-                    </li>
-                    <li class="nav__itemm">
-                        <a href="#qualification" class="nav__link">
-                            <i class="ri-book-line"></i> Qualifications
+                        <a href="#info_dikit" class="nav__link">
+                            <i class="ri-code-line"></i> Tentang Kami
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#achievements" class="nav__link">
-                            <i class="ri-trophy-line"></i> Achievements
+                            <i class="ri-trophy-line"></i> Kenapa Harus Disini?
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#projects" class="nav__link">
-                            <i class="ri-macbook-line"></i> Projects
+                            <i class="ri-macbook-line"></i> Price List
                         </a>
                     </li>
                     <li class="nav__itemm">
                         <a href="#contact" class="nav__link">
-                            <i class="ri-chat-4-line"></i> Contact Me
+                            <i class="ri-chat-4-line"></i> Hubungi Atmin
                         </a>
                     </li>
                 </ul>
@@ -161,8 +156,8 @@
             </div>
         </section>
 
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section" id="qualification">
+        <!--==================== INFO DIKIT ====================-->
+        <section class="qualification section" id="info_dikit">
             <h2 class="section__title">Info Dikit</h2>
             <span class="section__subtitle"> Sedikit Ingfo Soal Joki Yvezh </span>
             <div class="qualification__container container grid section__border">
@@ -207,7 +202,7 @@
                 class="qualification__img" />
         </section>
 
-        <!--==================== ACHIEVEMENTS ====================-->
+        <!--==================== KENAPA HARUS DISINI? ====================-->
         <section class="achievements section" id="achievements">
             <h2 class="section__title">Kenapa Harus Joki Disini?</h2>
             <span class="section__subtitle"> Sebenernya bebas si mau apa enggak hehw </span>
@@ -248,6 +243,8 @@
             </div>
         </section>
 
+
+        <!--==================== Price List ====================-->
         <!--==================== Price List Rawat Akun ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Rawat Akun</h2>
@@ -255,7 +252,7 @@
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Rawat Akun - Harian ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -270,7 +267,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Rawat Akun - Mingguan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -284,7 +281,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 3 ====================-->
+                        <!--==================== Rawat Akun - Bulanan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -313,13 +310,13 @@
         </section>
 
         <!--==================== Price List Joki Story ====================-->
-        <section class="projects section" id="projects">
+        <section class="projects section">
             <h2 class="section__title">Joki Quest</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Archon Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -334,7 +331,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Story Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -348,7 +345,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 3 ====================-->
+                        <!--==================== World Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -362,7 +359,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 4 ====================-->
+                        <!--==================== Hangout Quest ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -391,13 +388,13 @@
         </section>
 
         <!--==================== Price List Joki Explore ====================-->
-        <section class="projects section" id="projects">
+        <section class="projects section">
             <h2 class="section__title">Joki Explorasi</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Explore - Mondstadt ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -411,7 +408,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Explore - Liyue ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -425,7 +422,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 3 ====================-->
+                        <!--==================== Explore - Inazuma ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -439,7 +436,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 4 ====================-->
+                        <!--==================== Explore - Sumeru ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -453,7 +450,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 5 ====================-->
+                        <!--==================== Explore - Fontaine ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -467,7 +464,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 6 ====================-->
+                        <!--==================== Explore - Natlan ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -497,12 +494,12 @@
 
         <!--==================== Price List Joki Up Lv Char, Weapon, Build / Farm Artefak ====================-->
         <section class="projects section" id="projects">
-            <h2 class="section__title">Up Lv. Karakter dan Senjata</h2>
+            <h2 class="section__title">Up Lv. Karakter, Senjata, dan Build Artefak</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Up Level Karakter, Lv. 1 - 90 ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -516,7 +513,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Up Level Senjata, Lv. 1 - 90 ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -530,14 +527,14 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 3 ====================-->
+                        <!--==================== Rp. 10.000 - 50.000 / Karakter ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
                                 alt="projects image"
                                 class="projects__img" />
                             <div>
-                                <span class="projects__subtitle"> Rp. 10.000 - 30.000 / Karakter </span>
+                                <span class="projects__subtitle"> Rp. 10.000 - 50.000 / Karakter </span>
                                 <h1 class="projects__title">4 set Artefak Karakter</h1>
                                 <a href="#" class="projects__button">
                                     Sesuai Request dan tingkat kesulitan <i class="ri-arrow-right-line"></i>
@@ -565,7 +562,7 @@
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Event Kecil ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -579,7 +576,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Event Besar ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -607,14 +604,14 @@
             </div>
         </section>
 
-        <!--==================== Price List Joki Lainnya, Joki Teleport, Oculus, Achievement, Material ====================-->
+        <!--==================== Price List Joki Lainnya (Spiral, Weekly Boss, Weekly Bounty, Imaginarium Teather, Teleport, Oculus, Achievement, Material) ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Joki Lainnya</h2>
             <span class="section__subtitle"> Price List </span>
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
-                        <!--==================== PROJECT 1 ====================-->
+                        <!--==================== Joki Spiral Abyss ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -628,7 +625,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 2 ====================-->
+                        <!--==================== Farm Material Tanaman, Hasil Tambang, Musuh, Dll ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -642,7 +639,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 3 ====================-->
+                        <!--==================== Weekly Boss ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -656,7 +653,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 4 ====================-->
+                        <!--==================== Weekly Bounty ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -670,7 +667,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 5 ====================-->
+                        <!--==================== Imaginarium Teather ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -684,7 +681,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 6 ====================-->
+                        <!--==================== Statue of The Seven & Teleport ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -698,7 +695,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 7 ====================-->
+                        <!--==================== Oculus atau yang sejenisnya ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -712,7 +709,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!--==================== PROJECT 8 ====================-->
+                        <!--==================== Achievement ====================-->
                         <div class="projects__content swiper-slide">
                             <img
                                 src="assets\img\rawat-akun\rawat.png"
@@ -740,12 +737,13 @@
             </div>
         </section>
 
+
         <!--==================== Tata Cara Order Jokian ====================-->
         <section class="qualification section" id="qualification">
             <h2 class="section__title">Tata Cara Order Joki</h2>
             <span class="section__subtitle"> Tutor buat yang mau order jokiannya </span>
             <div class="qualification__container container grid section__border">
-                <!--==================== QUALIFICATION 1 ====================-->
+                <!--==================== Tata Caranya ====================-->
                 <div class="qualification__content">
                     <div class="qualification__info">
                         <div>
@@ -785,16 +783,16 @@
         <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">
-                Contact Me
+                Hubungi Atmin
             </h2>
             <span class="section__subtitle">
-                Get in touch
+                Yang mau order bisa kesini yah
             </span>
             <div class="contact__container container grid section__border">
                 <div class="contact__content">
                     <h3 class="contact__title">
                         <i class="ri-chat-3-line"></i>
-                        Text me
+                        Kirim pesan
                     </h3>
                     <div class="contact__info">
                         <div class="contact__data">
@@ -818,12 +816,12 @@
                         </div>
                         <div class="contact__data">
                             <span class="contact__data-title">
-                                Linkedin
+                                Instagram
                             </span>
                             <span class="contact__data-info">
-                                Naufal Fathi Rizqy Fadhilah
+                                @vyezhvillette
                             </span>
-                            <a href="https://linkedin.com/in/naufal-fathi-rizqy-fadhilah-384b7629a" target="_blank" class="contact__button">
+                            <a href="https://www.instagram.com/direct/t/17843304806301496" target="_blank" class="contact__button">
                                 Visit <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
@@ -831,7 +829,7 @@
                 </div>
                 <div class="contact__content">
                     <h3 class="contact__title">
-                        <i class="ri-send-plane-line"></i> Have a query for me?
+                        <i class="ri-send-plane-line"></i> Mau order joki?
                     </h3>
                     <form action="{{ route('contact.store') }}" method="POST" class="contact__form" id="contact-form">
                         @csrf
@@ -846,6 +844,12 @@
                                 Email
                             </label>
                             <input type="email" name="user_email" required placeholder="Your email" class="contact__form-input" id="contact-email">
+                        </div>
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">
+                                WhatsApp Number
+                            </label>
+                            <input type="tel" name="user_whatsapp" required placeholder="Your WhatsApp number" class="contact__form-input" id="contact-whatsapp">
                         </div>
                         <div class="contact__form-div contact__form-area">
                             <label class="contact__form-tag">
@@ -866,28 +870,28 @@
     <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__container container">
-            <h1 class="footer__title">Abhi Ram Tej</h1>
-            <p>Frontend Developer</p>
+            <h1 class="footer__title">Yvezh Joki</h1>
+            <p>Joki Gensin Teraman dan Terpercaya</p>
             <ul class="footer__list">
                 <li>
                     <a href="#home" class="footer__link">Home</a>
                 </li>
                 <li>
-                    <a href="#skills" class="footer__link">Skills</a>
+                    <a href="#info_dikit" class="footer__link">Tentang Kami</a>
                 </li>
                 <li>
-                    <a href="#projects" class="footer__link">Projects</a>
+                    <a href="#projects" class="footer__link">Price List</a>
                 </li>
             </ul>
             <ul class="footer__social">
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="ri-linkedin-box-line"></i>
+                <a href="https://wa.me/6281226110988" target="_blank" class="footer__social-link">
+                    <i class="ri-whatsapp-line"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
+                <a href="https://github.com/Ftih07" target="_blank" class="footer__social-link">
                     <i class="ri-github-line"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="ri-twitter-line"></i>
+                <a href="https://www.instagram.com/vyezhvillette/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
                 </a>
             </ul>
             <span class="footer__copy">

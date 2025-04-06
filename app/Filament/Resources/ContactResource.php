@@ -32,6 +32,10 @@ class ContactResource extends Resource
                     ->label('Email Sender')
                     ->required(),
 
+                Forms\Components\TextInput::make('whatsapp_number')
+                    ->label('Whatsapp Number')
+                    ->numeric(),
+
                 Forms\Components\Textarea::make('message')
                     ->label('Message')
                     ->required(),
@@ -45,7 +49,8 @@ class ContactResource extends Resource
                 //
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('email')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('message')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('whatsapp_number')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('message')->searchable()->sortable()->limit(30),
                 Tables\Columns\TextColumn::make('created_at')
                     ->since()
                     ->dateTimeTooltip()

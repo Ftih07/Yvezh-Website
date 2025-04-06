@@ -380,6 +380,12 @@
                             </label>
                             <input type="email" name="user_email" required placeholder="Your email" class="contact__form-input" id="contact-email">
                         </div>
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">
+                                WhatsApp Number
+                            </label>
+                            <input type="tel" name="user_whatsapp" required placeholder="Your WhatsApp number" class="contact__form-input" id="contact-whatsapp">
+                        </div>
                         <div class="contact__form-div contact__form-area">
                             <label class="contact__form-tag">
                                 Message
